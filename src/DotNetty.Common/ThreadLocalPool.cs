@@ -11,6 +11,9 @@ namespace DotNetty.Common
 
     public class ThreadLocalPool
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public sealed class Handle
         {
             internal int lastRecycledId;
@@ -48,7 +51,9 @@ namespace DotNetty.Common
                 delayedRecycled.Add(this);
             }
         }
-
+        /// <summary>
+        ///   周期队列
+        /// </summary>
         internal sealed class WeakOrderQueue
         {
             const int LinkCapacity = 16;
@@ -384,7 +389,10 @@ namespace DotNetty.Common
 
         public int MaxCapacity { get; }
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public sealed class ThreadLocalPool<T> : ThreadLocalPool
         where T : class
     {

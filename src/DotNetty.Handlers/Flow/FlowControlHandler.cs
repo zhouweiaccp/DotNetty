@@ -46,7 +46,9 @@ namespace DotNetty.Handlers.Flow
     public class FlowControlHandler : ChannelDuplexHandler
     {
         static readonly IInternalLogger Logger = InternalLoggerFactory.GetInstance<FlowControlHandler>();
-
+        /// <summary>
+        ///  反复循环器，[化工] 再循环器
+        /// </summary>
         static readonly ThreadLocalPool<RecyclableQueue> Recycler = new ThreadLocalPool<RecyclableQueue>(h => new RecyclableQueue(h));
 
         readonly bool releaseMessages;

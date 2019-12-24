@@ -57,7 +57,11 @@ namespace DotNetty.Common.Utilities
                     throw new ArgumentOutOfRangeException();
             }
         };
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="task"></param>
+        /// <param name="taskCompletionSource"></param>
         public static void LinkOutcome(this Task task, TaskCompletionSource taskCompletionSource)
         {
             switch (task.Status)

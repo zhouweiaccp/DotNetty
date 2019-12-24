@@ -39,7 +39,7 @@ namespace DotNetty.Transport.Bootstrapping
         {
             this.options = new ConcurrentDictionary<ChannelOption, ChannelOptionValue>();
             this.attrs = new ConcurrentDictionary<IConstant, AttributeValue>();
-            // Disallow extending from a different package.
+            // Disallow 驳回，不接受；不准许 extending from a different package.
         }
 
         protected internal AbstractBootstrap(AbstractBootstrap<TBootstrap, TChannel> bootstrap)
@@ -296,7 +296,7 @@ namespace DotNetty.Transport.Bootstrapping
                 throw;
             }
 
-            // If we are here and the promise is not failed, it's one of the following cases:
+            // If we are here and the promise许诺，允诺；希望 is not failed, it's one of the following cases:
             // 1) If we attempted registration from the event loop, the registration has been completed at this point.
             //    i.e. It's safe to attempt bind() or connect() now because the channel has been registered.
             // 2) If we attempted registration from the other thread, the registration request has been successfully

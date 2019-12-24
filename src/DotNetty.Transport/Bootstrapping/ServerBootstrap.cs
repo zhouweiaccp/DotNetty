@@ -164,7 +164,9 @@ namespace DotNetty.Transport.Bootstrapping
             }
             return this;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         class ServerBootstrapAcceptor : ChannelHandlerAdapter
         {
             readonly IEventLoopGroup childGroup;

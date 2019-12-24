@@ -64,7 +64,10 @@ namespace DotNetty.Handlers.Streams
 
             context.FireChannelWritabilityChanged();
         }
-
+        /// <summary>
+        /// 抛弃；被丢弃的东西或人s
+        /// </summary>
+        /// <param name="cause"></param>
         void Discard(Exception cause = null)
         {
             for (;;)
@@ -151,7 +154,7 @@ namespace DotNetty.Handlers.Streams
             }
 
             bool requiresFlush = true;
-            IByteBufferAllocator allocator = context.Allocator;
+            IByteBufferAllocator allocator = context.Allocator;//分配算符
             while (channel.IsWritable)
             {
                 if (this.currentWrite == null)
@@ -334,6 +337,9 @@ namespace DotNetty.Handlers.Streams
 
         sealed class PendingWrite
         {
+            /// <summary>
+            /// 许诺，允诺；希望
+            /// </summary>
             readonly TaskCompletionSource promise;
 
             public PendingWrite(object msg)

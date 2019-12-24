@@ -105,7 +105,7 @@ namespace DotNetty.Transport.Bootstrapping
         }
 
         /// <summary>
-        /// Connects an <see cref="IChannel"/> to the remote peer.
+        /// Connects an <see cref="IChannel"/> to the remote peer.凝视，盯着看；隐现；看见；匹配
         /// </summary>
         /// <param name="inetHost">The hostname of the endpoint to connect to.</param>
         /// <param name="inetPort">The port at the remote host to connect to.</param>
@@ -148,7 +148,7 @@ namespace DotNetty.Transport.Bootstrapping
         }
 
         /// <summary>
-        /// Performs DNS resolution for the remote endpoint and connects to it.
+        /// Performs执行；表演 DNS resolution 分辨率；决议；解决；决心 for the remote endpoint and connects to it.
         /// </summary>
         /// <param name="remoteAddress">The remote <see cref="EndPoint"/> to connect to.</param>
         /// <param name="localAddress">The local <see cref="EndPoint"/> to connect the remote to.</param>
@@ -186,7 +186,13 @@ namespace DotNetty.Transport.Bootstrapping
             await DoConnectAsync(channel, resolvedAddress, localAddress);
             return channel;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="channel"></param>
+        /// <param name="remoteAddress"></param>
+        /// <param name="localAddress"></param>
+        /// <returns></returns>
         static Task DoConnectAsync(IChannel channel,
             EndPoint remoteAddress, EndPoint localAddress)
         {

@@ -6,6 +6,10 @@ namespace DotNetty.Transport.Bootstrapping
     using System.Net;
     using System.Threading.Tasks;
 
+    /// <summary>
+    /// 主机找到ip
+    /// 
+    /// </summary>
     public class DefaultNameResolver : INameResolver
     {
         public bool IsResolved(EndPoint address) => !(address is DnsEndPoint);
